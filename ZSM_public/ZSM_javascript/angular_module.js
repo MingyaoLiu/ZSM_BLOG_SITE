@@ -1,0 +1,1 @@
+angular.module('BlogApp', ['ngRoute', 'BlogAppRoutes', 'ngAnimate', 'MainTempCtrl', 'MainTempCtrl', 'route-segment', 'view-segment']);
