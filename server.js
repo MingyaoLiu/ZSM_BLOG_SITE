@@ -5,6 +5,6 @@ var port = process.env.PORT || 8000;
 
 
 app.use(express.static(__dirname + '/ZSM_public'));
-app.listen(3000);
+app.listen(port);
 console.log('TheMatrixBlog is running on port ' + port);
 exports = module.exports = app; 
