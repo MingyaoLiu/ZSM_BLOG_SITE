@@ -1,4 +1,4 @@
-angular.module('appRoutes', []).config(function($routeSegmentProvider, $routeProvider) {
+angular.module('BlogAppRoute', []).config(function($routeSegmentProvider, $routeProvider) {
     
     // Configuring provider options
     
@@ -22,48 +22,48 @@ angular.module('appRoutes', []).config(function($routeSegmentProvider, $routePro
         .when('/section3',          's3')
         
         .segment('s1', {
-            templateUrl: 'templates/section1.html',
+            templateUrl: 'ZSM_content/templates/section1.html',
             controller: MainCtrl})
             
         .within()
             
             .segment('home', {
-                templateUrl: 'templates/section1/home.html'})
+                templateUrl: 'ZSM_content/templates/section1/home.html'})
                 
             .segment('itemInfo', {
-                templateUrl: 'templates/section1/item.html',
+                templateUrl: 'ZSM_content/templates/section1/item.html',
                 controller: Section1ItemCtrl,
                 dependencies: ['id']})
                 
             .within() 
                 
                 .segment('tab1', {
-                    templateUrl: 'templates/section1/tabs/tab1.html'})
+                    templateUrl: 'ZSM_content/templates/section1/tabs/tab1.html'})
                     
                 .segment('tab2', {
-                    templateUrl: 'templates/section1/tabs/tab2.html'})
+                    templateUrl: 'ZSM_content/templates/section1/tabs/tab2.html'})
                 
             .up()
                 
             .segment('prefs', {
-                templateUrl: 'templates/section1/prefs.html'})
+                templateUrl: 'ZSM_content/templates/section1/prefs.html'})
                 
         .up()
         
         .segment('s2', {
-            templateUrl: 'templates/section2.html',
+            templateUrl: 'ZSM_content/templates/section2.html',
             controller: MainCtrl})
             
         .within()
             
             .segment('itemInfo', {
-                templateUrl: 'templates/section2/item.html',
+                templateUrl: 'ZSM_content/templates/section2/item.html',
                 dependencies: ['id']})
                 
         .up()
             
         .segment('s3', {
-            templateUrl: 'templates/section3.html'})
+            templateUrl: 'ZSM_content/templates/section3.html'})
             
             
     // Also, we can add new item in a deep separately. This is useful when working with
@@ -76,7 +76,7 @@ angular.module('appRoutes', []).config(function($routeSegmentProvider, $routePro
         .within('s1')
             .within('itemInfo')
                 .segment('tab3', {
-                    templateUrl: 'templates/section1/tabs/tab3.html'})
+                    templateUrl: 'ZSM_content/templates/section1/tabs/tab3.html'})
                     
                     
     // This is some usage of `resolve`, `untilResolved` and `resolveFailed` features
@@ -94,24 +94,24 @@ angular.module('appRoutes', []).config(function($routeSegmentProvider, $routePro
             .segment('invalidTemplate', {
                 templateUrl: 'this-does-not-exist.html',    // 404
                 resolveFailed: {
-                    templateUrl: 'templates/error.html',
+                    templateUrl: 'ZSM_content/templates/error.html',
                     controller: 'ErrorCtrl'
                 }
             })
             .segment('invalidData', {
-                templateUrl: 'templates/section1/home.html',     // Correct!
+                templateUrl: 'ZSM_content/templates/section1/home.html',     // Correct!
                 resolve: {
                     data: function($q) {
                         return $q.reject('ERROR DESCRIPTION');     // Failed to load data
                     }
                 },
                 resolveFailed: {
-                    templateUrl: 'templates/error.html',
+                    templateUrl: 'ZSM_content/templates/error.html',
                     controller: 'ErrorCtrl'
                 }
             })
             .segment('slowDataSimple', {
-                templateUrl: 'templates/section1/slow-data.html',
+                templateUrl: 'ZSM_content/templates/section1/slow-data.html',
                 controller: 'SlowDataCtrl',
                 resolve: {
                     data: function($timeout, loader) {
@@ -121,7 +121,7 @@ angular.module('appRoutes', []).config(function($routeSegmentProvider, $routePro
                 }
             })
             .segment('slowDataLoading', {
-                templateUrl: 'templates/section1/slow-data.html',
+                templateUrl: 'ZSM_content/templates/section1/slow-data.html',
                 controller: 'SlowDataCtrl',
                 resolve: {
                     data: function($timeout) {
@@ -129,11 +129,11 @@ angular.module('appRoutes', []).config(function($routeSegmentProvider, $routePro
                     }
                 },
                 untilResolved: {
-                    templateUrl: 'templates/loading.html'
+                    templateUrl: 'ZSM_content/templates/loading.html'
                 }
             })
             .segment('inlineParent', {
-                templateUrl: 'templates/section1/inline-view.html'
+                templateUrl: 'ZSM_content/templates/section1/inline-view.html'
             })
             .within()
                 .segment('inlineChildren', {
@@ -145,14 +145,14 @@ angular.module('appRoutes', []).config(function($routeSegmentProvider, $routePro
                         }
                     },
                     untilResolved: {
-                        templateUrl: 'templates/loading.html'
+                        templateUrl: 'ZSM_content/templates/loading.html'
                     }
                 })
                 .up()
 
             .within('itemInfo')
                 .segment('tabSlow', {
-                    templateUrl: 'templates/section1/slow-data.html',
+                    templateUrl: 'ZSM_content/templates/section1/slow-data.html',
                     controller: 'SlowDataCtrl',
                     resolve: {
                         data: function($timeout) {
@@ -160,7 +160,7 @@ angular.module('appRoutes', []).config(function($routeSegmentProvider, $routePro
                         }
                     },
                     untilResolved: {
-                        templateUrl: 'templates/loading.html'
+                        templateUrl: 'ZSM_content/templates/loading.html'
                     }
                 })
 
