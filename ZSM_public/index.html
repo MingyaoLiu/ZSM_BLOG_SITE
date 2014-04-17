@@ -1,30 +1,35 @@
 <!doctype html>
-<html lang="en" ng-app="BlogApp">
+<html ng-app="BlogApp">
 <head>
     <meta charset="utf-8">
-    <title>Route Segment Demo</title>
-    <link rel="stylesheet" href="ZSM_stylesheet/bootstrap.min.css">
-    <link rel="stylesheet" href="ZSM_stylesheet/app.css">    
+    <title>The Matrix Blog DEMO</title>
+
+
+    <link rel="stylesheet" href="ZSM_stylesheet/temp-default.css">
+    <link rel="stylesheet" href="ZSM_stylesheet/navigation.css">
+
 </head>
 <body>
     
     <div class="ng-cloak" ng-controller="MainCtrl">
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <div class="pull-right label">Current route: <span ng-bind="$routeSegment.name"></span></div>
-                    <a class="brand" href="http://angular-route-segment.com">angular-route-segment</a>
-                    <ul class="nav">
-                        <li ng-class="{active: $routeSegment.startsWith('s1')}"><a href="#/section1">Section 1</a></li>
-                        <li ng-class="{active: $routeSegment.startsWith('s2')}"><a href="#/section2">Section 2</a></li>
-                        <li ng-class="{active: $routeSegment.startsWith('s3')}"><a href="#/section3">Section 3</a></li>
-                    </ul>
-                </div>
+        <div class="temp-navbar">
+            <div class="temp-navbar-inner">
+                <ul class="temp-nav">
+                    <li ng-class="{active: $routeSegment.startsWith('s1')}">
+                        <a href="#/section1">Section 1</a>
+                    </li>
+                    <li ng-class="{active: $routeSegment.startsWith('s2')}">
+                        <a href="#/section2">Section 2</a>
+                    </li>
+                    <li ng-class="{active: $routeSegment.startsWith('s3')}">
+                        <a href="#/section3">Section 3</a>
+                    </li>
+                </ul>
             </div>
         </div>
     
-        <div class="container" id="content">
+        <div class="temp-main" id="temp-content">
             <div class="row anim" app-view-segment="0"></div>
         </div>
 

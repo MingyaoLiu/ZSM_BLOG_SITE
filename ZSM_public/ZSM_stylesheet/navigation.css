@@ -1,0 +1,64 @@
+
+
+
+.temp-navbar {
+  max-width: 1024px;
+  height: 260px;
+  top: 0;
+  margin: auto;
+  background-color: #EFEFEF;
+}
+
+.temp-navbar-inner {
+  width: 100%;
+  
+}
+.temp-navbar-inner ul {
+  width: 100%;
+  float: left;
+  margin-top: 200px;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #ccc; 
+}
+.temp-navbar-inner ul li {
+  float: left;
+}
+.temp-navbar-inner ul li a {
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  border-right: 1px solid #ccc;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.temp-navbar-inner ul li a:hover {
+  color: #c00;
+  background: #efefef; /* Old browsers */
+  background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #efefef 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #efefef 0%,#ffffff 100%); /* W3C */
+}
+.temp-navbar-inner ul .active {
+  color: #c00;
+  background: #efefef; /* Old browsers */
+  background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #efefef 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #efefef 0%,#ffffff 100%); /* W3C */
+}
+.temp-navbar-inner ul .nav-last {
+  float:right;
+}
+.temp-navbar-inner ul .nav-last a {
+  border-left: 1px solid #ccc;
+}
