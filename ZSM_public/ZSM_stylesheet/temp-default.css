@@ -15,3 +15,30 @@ body {
   margin: 0 auto;
   height: 100%;
 }
+
+.anim.ng-enter {
+	transition: opacity 1s;
+	opacity: 0.0;
+}
+
+.anim.ng-enter-active {
+	opacity: 1.0;
+}
+.anim.ng-leave {
+    display: none;
+}
+
+#loading {
+    position: absolute;
+    width: 300px;
+    top: 10px;
+    left: 500px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 1040;
+}
+
+.temp-main {
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: #F2F2F2;
+}
