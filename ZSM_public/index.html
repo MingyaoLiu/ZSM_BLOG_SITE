@@ -2,20 +2,33 @@
 <html ng-app="BlogApp">
 <head>
     <meta charset="utf-8">
-    <title>The Matrix Blog DEMO</title>
-
-
+    <title>The Matrix Blog @ Port 8000</title>
     <link rel="stylesheet" href="ZSM_stylesheet/temp-default.css">
     <link rel="stylesheet" href="ZSM_stylesheet/navigation.css">
-
 </head>
+
 <body>
-    
     <div class="ng-cloak" ng-controller="MainCtrl">
 
-        <div class="temp-navbar">
+        <div class="temp-navbar" >
+            
+            <div id="temp-navbar-port">
+
+            <img class="temp-parallex-header" src="ZSM_image/0.png" alt="" style="width:978px; height:325px;"/>
+            <img class="temp-parallex-header" src="ZSM_image/1.png" alt="" style="width:987px; height:328px;"/>
+            <img class="temp-parallex-header" src="ZSM_image/2.png" alt="" style="width:1001px; height:333px;"/>
+            <img class="temp-parallex-header" src="ZSM_image/3.png" alt="" style="width:1031px; height:343px;"/>
+            <img class="temp-parallex-header" src="ZSM_image/4.png" alt="" style="width:1067px; height:355px;"/>
+            <img class="temp-parallex-header" src="ZSM_image/5.png" alt="" style="width:1120px; height:373px;"/>
+            <img class="temp-parallex-header" src="ZSM_image/6.png" alt="" style="width:1200px; height:400px;"/>
+
+            </div>
+
             <div class="temp-navbar-inner">
                 <ul class="temp-nav">
+
+
+
                     <li ng-class="{active: $routeSegment.startsWith('s1')}">
                         <a href="#/section1">Section 1</a>
                     </li>
@@ -28,25 +41,42 @@
                 </ul>
             </div>
         </div>
-    
+
         <div class="temp-main">
-            <div class="row anim" app-view-segment="0"></div>
+            <div class="anim" app-view-segment="0">
+            </div>
         </div>
 
-        <div id="loading" class=alert ng-show="loader.show">Loading...</div>
-    
+        <div id="loading" ng-show="loader.show">Loading...</div>
     </div>
-
 
     <script src="ZSM_library/angular-1.3.0-beta.5/angular.js"></script>
     <script src="ZSM_library/angular-1.3.0-beta.5/angular-route.js"></script>
     <script src="ZSM_library/angular-1.3.0-beta.5/angular-animate.js"></script>
+
+
+    <script src="ZSM_library/jquery-2.1.0.js"></script>
+    <script src="ZSM_library/jquery.parallax.js"></script>
+
+    
+
     <script src="ZSM_library/angular-route-segment.js"></script>
     <script src="ZSM_javascript/angular_module.js"></script>
     <script src="ZSM_javascript/ZSM_configration/MainTempConfig.js"></script>
-
     <script src="ZSM_javascript/ZSM_controller/MainTempCtrl.js"></script>
 
+    <script type="text/javascript">
+
+        jQuery(document).ready(function(){
+            
+            // Declare parallax on layers
+            jQuery('.temp-parallex-header').parallax({
+                mouseport: jQuery(".temp-navbar-inner")
+            });
+
+        });
+
+    </script>
 
    
 </body>
