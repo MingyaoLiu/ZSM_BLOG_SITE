@@ -1,0 +1,13 @@
+.temp-blog-aside {
+	background-color: #CCC;
+	height: 500px;
+	width: 300px;
+	float: left;
+}
+
+.temp-blog-article {
+	background-color: #DDD;
+	height: 600px;
+	margin-left: 320px;
+	margin-right: 0px;
+}

@@ -2,6 +2,13 @@ angular.module('BlogApp', ['ngRoute', 'ngAnimate', 'route-segment', 'view-segmen
 .value('loader', {show: false})
 
 
+function BlogCtrl($scope, $routeSegment) {
+    
+    $scope.$routeSegment = $routeSegment;
+    $scope.test = { btnClicked: false };
+    $scope.items = [ 1,2,3,4,5 ];
+}
+
 
 function Section1Ctrl($scope, $routeSegment) {
     

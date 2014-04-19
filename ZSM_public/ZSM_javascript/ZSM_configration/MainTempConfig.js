@@ -9,7 +9,20 @@ angular.module('MainTempConfig', []).config(function($routeSegmentProvider, $rou
     // 2. traversing through segment tree to set it up
   
     $routeSegmentProvider
-    
+        
+
+
+        .when('/blog',              'blog.top')
+        .segment('blog', {
+            templateUrl: 'ZSM_content/ZSM_template/temp-blog.html',
+            controller: BlogCtrl
+        })
+        .within()
+        .segment('top', {
+            templateUrl: 'ZSM_content/ZSM_template/temp-blog-home.html'
+        })
+        .up()
+
         .when('/section1',          's1.home')
         .when('/section1/prefs',    's1.prefs')
         .when('/section1/:id',      's1.itemInfo.tab1')
@@ -23,7 +36,8 @@ angular.module('MainTempConfig', []).config(function($routeSegmentProvider, $rou
         
         .segment('s1', {
             templateUrl: 'ZSM_content/templates/section1.html',
-            controller: MainCtrl})
+            controller: MainCtrl
+        })
             
         .within()
             
