@@ -167,5 +167,5 @@ angular.module('MainTempConfig', []).config(function($routeSegmentProvider, $rou
                 
         
         
-    $routeProvider.otherwise({redirectTo: '/section1'}); 
+    $routeProvider.otherwise({redirectTo: '/blog'}); 
 }) ;

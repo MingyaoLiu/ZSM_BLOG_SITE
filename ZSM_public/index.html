@@ -24,7 +24,9 @@
             <div class="temp-navbar-inner">
                 <ul class="temp-nav">
 
-
+                    <li ng-class="{active: $routeSegment.startsWith('blog')}">
+                        <a href="#/blog">BLOG</a>
+                    </li>
 
                     <li ng-class="{active: $routeSegment.startsWith('s1')}">
                         <a href="#/section1">Section 1</a>
