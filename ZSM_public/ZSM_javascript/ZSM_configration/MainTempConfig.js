@@ -12,13 +12,13 @@ angular.module('MainTempConfig', []).config(function($routeSegmentProvider, $rou
         
 
 
-        .when('/blog',              'blog.top')
+        .when('/blog',              'blog.home')
         .segment('blog', {
             templateUrl: 'ZSM_content/ZSM_template/temp-blog.html',
             controller: BlogCtrl
         })
         .within()
-        .segment('top', {
+        .segment('home', {
             templateUrl: 'ZSM_content/ZSM_template/temp-blog-home.html'
         })
         .up()

@@ -2,16 +2,6 @@ angular.module('BlogApp', ['ngRoute', 'ngAnimate', 'route-segment', 'view-segmen
 .value('loader', {show: false})
 
 
-function BlogCtrl($scope, $routeSegment) {
-    
-    $scope.$routeSegment = $routeSegment;
-    $scope.test = { btnClicked: false };
-    $scope.items = [ 1,2,3,4,5 ];
-    jQuery('body').animate(
-        {scrollTop: jQuery('.temp-navbar').offset().top}, 100
-
-    );
-}
 
 
 function Section1Ctrl($scope, $routeSegment) {
@@ -43,4 +33,5 @@ function SlowDataCtrl($scope, data, loader) {
     loader.show = false;
     $scope.data = data;
 }
+
 

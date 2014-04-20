@@ -64,6 +64,9 @@
     <script src="ZSM_javascript/angular_module.js"></script>
     <script src="ZSM_javascript/ZSM_configration/MainTempConfig.js"></script>
     <script src="ZSM_javascript/ZSM_controller/MainTempCtrl.js"></script>
+    <script src="ZSM_javascript/ZSM_controller/BlogTempCtrl.js"></script>
+    <script src="ZSM_javascript/ZSM_service/BlogTempServ.js"></script>
+
 
     <script type="text/javascript">
 
@@ -75,6 +78,20 @@
             });
 
         });
+        var getAllPhones = function(db) {
+    return function(req, res) {
+        db.firstblog.find(function (err, docs) {
+            if (err) {
+                console.log("Records cannot be retrieved.");
+            } else {
+                console.log("Records can be retrieved.");
+                //res.write(JSON.stringify(docs));
+                res.json(docs);
+                res.end();
+            }
+        });
+    }
+}
 
     </script>
 

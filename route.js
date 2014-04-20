@@ -1,7 +1,9 @@
 module.exports = express.Router() {
 
+	var db = require("./db");
+	app.get('/phonelist', getAllPhones(db));
 	app.get('/', function(req, res) {
-		res.sendfile('index.html'); // load our public/views/index.html file
+		res.sendfile('index.html');
 	});
 
 };
