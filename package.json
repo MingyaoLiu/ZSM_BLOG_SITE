@@ -4,6 +4,7 @@
   "description": "Next generation Bloging",
   "dependencies": {
     "express": "*",
+    "mongojs": "*",
     "less": "*"
   }
 }

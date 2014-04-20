@@ -7,6 +7,10 @@ function BlogCtrl($scope, $routeSegment) {
     $scope.$routeSegment = $routeSegment;
     $scope.test = { btnClicked: false };
     $scope.items = [ 1,2,3,4,5 ];
+    jQuery('body').animate(
+        {scrollTop: jQuery('.temp-navbar').offset().top}, 100
+
+    );
 }
 
 
