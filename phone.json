@@ -1,4 +1,3 @@
-var phone_data = [
 	{
 		model: "Samsung - Galaxy Nexus",
 		release_date: "2011/11",
@@ -38,4 +37,3 @@ var phone_data = [
 			weight_g: "135"
 		}
 	}
-]

@@ -1,14 +1,12 @@
 var http = require('http');
 var express = require('express');
 var less = require('less');
-var mongojs = require('mongojs');
-var db = require("./db");
+//var mongojs = require('mongojs');
+//var databaseUrl = "107.182.179.168:27017/blogdb";
+//var collections = ["firstblog"];
+//var db = require("mongojs").connect(databaseUrl, collections);
 var app = express();
 var port = process.env.PORT || 8000;
-
-db.runCommand({ping:1}, function(err, res) {
-    if(!err && res.ok) console.log("we're up");
-});
 
 app.use(express.static(__dirname + '/ZSM_public'));
 app.listen(port);

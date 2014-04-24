@@ -17,7 +17,7 @@
             
             
             <img class="temp-parallex-header" src="ZSM_content/ZSM_theme/theme1/temp-title-header.png" alt="" style="width:1024px; height:250px;"/>
-            <img class="temp-parallex-header" src="ZSM_content/ZSM_theme/theme1/temp-header-1.png" alt="" style="width:1324px; height:250px;"/>
+            <img class="temp-parallex-header" src="ZSM_content/ZSM_theme/theme1/temp-header-1.png" alt="" style="width:1324px; height:350px;"/>
             <img class="temp-parallex-header" src="ZSM_content/ZSM_theme/theme1/temp-header-2.png" alt="" style="width:924px; height:250px;"/>
 
             </div>
@@ -37,6 +37,9 @@
                     </li>
                     <li ng-class="{active: $routeSegment.startsWith('s3')}">
                         <a href="#/section3">Section 3</a>
+                    </li>
+                    <li ng-class="{active: $routeSegment.startsWith('s3')}" class="nav-last">
+                        <a href="#/section3">LOGIN</a>
                     </li>
                 </ul>
             </div>
@@ -69,30 +72,11 @@
 
 
     <script type="text/javascript">
-
         jQuery(document).ready(function(){
-            
-            // Declare parallax on layers
             jQuery('.temp-parallex-header').parallax({
                 mouseport: jQuery(".temp-navbar-inner")
             });
-
         });
-        var getAllPhones = function(db) {
-    return function(req, res) {
-        db.firstblog.find(function (err, docs) {
-            if (err) {
-                console.log("Records cannot be retrieved.");
-            } else {
-                console.log("Records can be retrieved.");
-                //res.write(JSON.stringify(docs));
-                res.json(docs);
-                res.end();
-            }
-        });
-    }
-}
-
     </script>
 
    
