@@ -2,9 +2,10 @@
   "name": "TheMatrixBlog",
   "version": "0.1.0",
   "description": "Next generation Bloging",
+  "main": "server.js",
   "dependencies": {
     "express": "*",
     "mongojs": "*",
-    "less": "*"
+    "body-parser": "*"
   }
 }
