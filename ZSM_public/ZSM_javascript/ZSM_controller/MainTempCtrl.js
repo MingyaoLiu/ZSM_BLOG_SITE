@@ -7,5 +7,6 @@ function MainCtrl($scope, $routeSegment, loader) {
 	$scope.loader = loader;
 	$scope.$on('routeSegmentChange', function() {
 		loader.show = false;
-	})
+	});
+	
 }
