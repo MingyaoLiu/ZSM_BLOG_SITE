@@ -2,7 +2,8 @@ var http = require('http');
 var express = require('express');
 var less = require('less');
 var mongojs = require('mongojs');
-var db = mongojs('107.182.179.168/blogdb', ['firstblog']);
+var db = mongojs('107.182.179.168/blogdb');
+var firstblog = db.collection('firstblog');
 var app = express();
 var router = express.Router(); 
 var bodyParser = require('body-parser');
@@ -18,7 +19,18 @@ router.get('/', function(req, res) {
 	res.json({ message: 'hooray! welcome to our api!' });	
 });
 
-// more routes for our API will happen here
+// Route API 
+router.route('/firstblog')
+	.post(function(req, res) {
+		firstblog.save(req.body);
+	})
+	.get(function(req, res) {
+		firstblog.find(function(err, data) {
+			if (err)
+				res.send(err);
+			res.json(data);
+		});
+	});
 
 app.use('/api', router);
 
