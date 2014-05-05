@@ -10,4 +10,36 @@
 	height: 600px;
 	margin-left: 320px;
 	margin-right: 0px;
+	position: relative;
+}
+
+
+.blogposts {
+	margin-left: 10px;
+	margin-right: 10px;
+	height: auto;
+	position: relative;
+	background-color: green;
+}
+
+.singlepost {
+	margin-left: 10px;
+	margin-right: 10px;
+	display: block;
+	background-color: yellow;
+	height: auto;
+}
+.postliveon {
+	margin-left: 10px;
+	margin-right: 10px;
+	display: block;
+	background-color: red;
+	height: auto;
+}
+.postliveoff {
+	margin-left: 10px;
+	margin-right: 10px;
+	display: block;
+	background-color: blue;
+	height: auto;
 }

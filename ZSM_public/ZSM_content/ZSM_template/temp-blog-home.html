@@ -2,11 +2,33 @@
 <div ng-controller="BlogCtrl" >
 	<div class="blogposts">
 
-		<article class="singleblog" ng-repeat="blog in blogdescriptions">
-			<h1>{{blog.title}}</h1>
+		<article class="singlepost" ng-repeat="blog in blogdescriptions">
+			<div class="posttitle">
+				<h1>{{blog.title}}</h1>
+			</div>
+			<div class="posttool">
+				<div class="postdate">
+					<span>{{blog.date}}</span>
+				</div>
+				<div class="postcommentnum">
+					
+				</div>
+				<div ng-if="blog.livechat == 1" class="postliveon">
+					post on!!!
+				</div>
+				<div ng-if="blog.livechat == 0" class="postliveoff">
+					post off @@@
+				</div>
+			</div>
+			<div class="postdesc">
+				
+			</div>
+			<div class="postlink">
 
-
-
+			</div>
+			<div class="posttag">
+				
+			</div>
 		</article>
 
 
