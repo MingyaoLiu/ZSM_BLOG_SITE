@@ -11,16 +11,26 @@
 					<span>{{blog.date}}</span>
 				</div>
 				<div class="postcommentnum">
-					
+					<span>{{blog.comment}}</span>
 				</div>
+
 				<div ng-if="blog.livechat == 1" class="postliveon">
-					post on!!!
+					<span>live chat</span>
 				</div>
 				<div ng-if="blog.livechat == 0" class="postliveoff">
-					post off @@@
+					<span>post off @@@</span>
 				</div>
+				
+
+				
 			</div>
 			<div class="postdesc">
+				<div ng-if="blog.mediatype == 'picture'" class="descpicture">
+					<img src="/ZSM_content/ZSM_image/{{blog.medialink}}" height="300px" width="100%">
+				</div>
+				<div class="desctext" ng-bind-html="blog.description">
+					{{blog.description}}
+				</div>
 				
 			</div>
 			<div class="postlink">

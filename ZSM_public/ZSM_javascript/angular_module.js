@@ -1,4 +1,4 @@
-angular.module('BlogApp', ['ngRoute', 'ngAnimate', 'route-segment', 'view-segment', 'MainTempConfig', 'MainTempCtrl'])
+angular.module('BlogApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 'route-segment', 'view-segment', 'MainTempConfig', 'MainTempCtrl'])
 .value('loader', {show: false})
 
 

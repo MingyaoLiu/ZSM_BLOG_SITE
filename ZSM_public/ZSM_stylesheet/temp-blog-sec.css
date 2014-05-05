@@ -27,19 +27,56 @@
 	margin-right: 10px;
 	display: block;
 	background-color: yellow;
-	height: auto;
+	height: 600px;
 }
-.postliveon {
+
+.posttitle {
+	background-color: pink;
+}
+
+.postdate {
+	width: 200px;
 	margin-left: 10px;
+	height: auto;
+	float: left;
+	display: block;
+	background-color: orange;
+}
+.postcommentnum {
+	width: 100px;
+	margin-left: 10px;
+	height: auto;
+	float: left;
+	display: block;
+	background-color: pink;
+}
+.postcommentnum span {
+	color: snow;
+	clear: right;
+}
+
+
+.postliveon {
+	width: 100px;
 	margin-right: 10px;
+	height: auto;
+	float: right;
 	display: block;
 	background-color: red;
-	height: auto;
+	clear: right;
+}
+.postliveon span {
+	color: yellow;
 }
 .postliveoff {
-	margin-left: 10px;
+	width: 100px;
 	margin-right: 10px;
+	height: auto;
+	float: right;
 	display: block;
 	background-color: blue;
-	height: auto;
+	clear: right;
+}
+.postliveoff span {
+	color: white;
 }
