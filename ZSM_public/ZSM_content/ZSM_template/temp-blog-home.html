@@ -1,14 +1,23 @@
 
 <div ng-controller="BlogCtrl" >
+	<div class="blogposts">
+
+		<article class="singleblog" ng-repeat="blog in blogdescriptions">
+			<h1>{{blog.title}}</h1>
 
 
+
+		</article>
+
+
+	</div>
 
 	<p>dsafasdfsdfsfsdfsdfs</p>
 	<p>dsafasdfsdfsfsdfsdfs</p>
 	<a href="/#/section1">dsafasdfsdfsfsdfsdfs</a>
-	<ul ng-repeat="firstblog in firstblogs">
+	<ul ng-repeat="blogdescription in blogdescriptions">
 		<!-- <li class="bigone">{{}}</li> -->
-		<li class="normalone">{{firstblog.name}}</li>
+		<li class="normalone">{{blogdescription.title}}</li>
 	</ul>
 	<p>dsafasdfsdfsfsdfsdfs</p>
 	<p>dsafasdfsdfsfsdfsdfs</p>

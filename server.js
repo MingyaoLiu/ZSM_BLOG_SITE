@@ -3,7 +3,7 @@ var express = require('express');
 var less = require('less');
 var mongojs = require('mongojs');
 var db = mongojs('107.182.179.168/blogdb');
-var firstblog = db.collection('firstblog');
+var blogdescription = db.collection('BlogDescription');
 var app = express();
 var router = express.Router(); 
 var bodyParser = require('body-parser');
@@ -20,12 +20,12 @@ router.get('/', function(req, res) {
 });
 
 // Route API 
-router.route('/firstblog')
+router.route('/blogdescription')
 	.post(function(req, res) {
-		firstblog.save(req.body);
+		blogdescription.save(req.body);
 	})
 	.get(function(req, res) {
-		firstblog.find(function(err, data) {
+		blogdescription.find(function(err, data) {
 			if (err)
 				res.send(err);
 			res.json(data);
