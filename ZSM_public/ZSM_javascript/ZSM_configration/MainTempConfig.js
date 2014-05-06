@@ -1,6 +1,13 @@
-angular.module('MainTempConfig', []).config(function($routeSegmentProvider, $routeProvider) {
+angular.module('MainTempConfig', []).config(function($sceDelegateProvider, $routeSegmentProvider, $routeProvider) {
 
-    // Configuring provider options
+
+    $sceDelegateProvider.resourceUrlWhitelist([
+       'self',
+       'http://*.youtube.com/**'
+    ]);
+    $sceDelegateProvider.resourceUrlBlacklist([
+        'http://thisistheblacklist.cm'
+    ]);
     
     $routeSegmentProvider.options.autoLoadTemplates = true;
     

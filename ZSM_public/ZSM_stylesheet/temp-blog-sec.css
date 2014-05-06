@@ -34,12 +34,20 @@
 	background-color: pink;
 }
 
+.posttool {
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: red;
+	position: relative;
+	height: auto;
+	display: block;
+}
+
 .postdate {
 	width: 200px;
 	margin-left: 10px;
 	height: auto;
 	float: left;
-	display: block;
 	background-color: orange;
 }
 .postcommentnum {
@@ -47,7 +55,6 @@
 	margin-left: 10px;
 	height: auto;
 	float: left;
-	display: block;
 	background-color: pink;
 }
 .postcommentnum span {
@@ -61,7 +68,6 @@
 	margin-right: 10px;
 	height: auto;
 	float: right;
-	display: block;
 	background-color: red;
 	clear: right;
 }
@@ -73,10 +79,41 @@
 	margin-right: 10px;
 	height: auto;
 	float: right;
-	display: block;
 	background-color: blue;
 	clear: right;
 }
 .postliveoff span {
 	color: white;
+}
+
+
+.postdesc {
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: blue;
+	position: relative;
+}
+
+.descpicture  {
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: green;
+	position: relative;
+}
+
+.descvideo {
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: green;
+	position: relative;
+	padding-bottom: 55%; /* 16:9 @ 56.25 w/ control */
+	padding-top: 0px; /* 25px original */
+	height: 0;
+}
+.descvideo iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

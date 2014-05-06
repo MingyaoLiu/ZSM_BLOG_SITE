@@ -4,7 +4,7 @@
 
 		<article class="singlepost" ng-repeat="blog in blogdescriptions">
 			<div class="posttitle">
-				<h1>{{blog.title}}</h1>
+				<span>{{blog.title}}</span>
 			</div>
 			<div class="posttool">
 				<div class="postdate">
@@ -13,20 +13,21 @@
 				<div class="postcommentnum">
 					<span>{{blog.comment}}</span>
 				</div>
-
 				<div ng-if="blog.livechat == 1" class="postliveon">
 					<span>live chat</span>
 				</div>
 				<div ng-if="blog.livechat == 0" class="postliveoff">
 					<span>post off @@@</span>
 				</div>
-				
-
-				
+				<br style="clear:right" />
 			</div>
+
 			<div class="postdesc">
 				<div ng-if="blog.mediatype == 'picture'" class="descpicture">
 					<img src="/ZSM_content/ZSM_image/{{blog.medialink}}" height="300px" width="100%">
+				</div>
+				<div ng-if="blog.mediatype == 'youtube'" class="descvideo">
+					<iframe width="843" height="480" src="{{blog.medialink}}" frameborder="0"  allowfullscreen></iframe>
 				</div>
 				<div class="desctext" ng-bind-html="blog.description">
 					{{blog.description}}
