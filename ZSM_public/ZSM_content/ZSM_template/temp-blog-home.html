@@ -32,13 +32,18 @@
 				<div class="desctext" ng-bind-html="blog.description">
 					{{blog.description}}
 				</div>
-				
+			</div>
+			<div class="postauthor">
+				<span ng-if="blog.author.prime">{{blog.author.prime.first}}, {{blog.author.prime.last}}</span>
+				<span ng-if="blog.author.coop">/ {{blog.author.coop.first}}, {{blog.author.coop.last}}</span>
 			</div>
 			<div class="postlink">
-
-			</div>
-			<div class="posttag">
+				<span>{{blog.link}}</span>
 				
+			</div>
+			<br style="clear:right" />
+			<div class="posttag">
+				<span ng-repeat="tag in blog.tag">{{tag}} /</span>
 			</div>
 		</article>
 
