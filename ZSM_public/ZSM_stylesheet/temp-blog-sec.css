@@ -3,15 +3,23 @@
 	height: 500px;
 	width: 300px;
 	float: left;
+	position: relative;
 }
 
 .temp-blog-article {
 	background-color: #DDD;
-	height: 600px;
+	height: auto;
 	margin-left: 320px;
 	margin-right: 0px;
 	position: relative;
 }
+
+.temp-blog-footer {
+	width: 100%;
+	height: 100px;
+	background-color: #EEE;
+}
+
 
 
 .blogposts {
@@ -27,7 +35,7 @@
 	margin-right: 10px;
 	display: block;
 	background-color: yellow;
-	height: 600px;
+	height: auto;
 }
 
 .posttitle {
@@ -106,7 +114,7 @@
 	margin-right: 10px;
 	background-color: green;
 	position: relative;
-	padding-bottom: 55%; /* 16:9 @ 56.25 w/ control */
+	padding-bottom: 54.35%; /* 16:9 @ 56.25 w/ control */
 	padding-top: 0px; /* 25px original */
 	height: 0;
 }

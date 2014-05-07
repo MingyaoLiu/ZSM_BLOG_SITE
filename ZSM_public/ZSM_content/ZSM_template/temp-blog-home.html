@@ -1,7 +1,6 @@
 
 <div ng-controller="BlogCtrl" >
 	<div class="blogposts">
-
 		<article class="singlepost" ng-repeat="blog in blogdescriptions">
 			<div class="posttitle">
 				<span>{{blog.title}}</span>
@@ -24,7 +23,7 @@
 
 			<div class="postdesc">
 				<div ng-if="blog.mediatype == 'picture'" class="descpicture">
-					<img src="/ZSM_content/ZSM_image/{{blog.medialink}}" height="300px" width="100%">
+					<img src="/ZSM_content/ZSM_image/{{blog.medialink}}" height="100%" width="100%">
 				</div>
 				<div ng-if="blog.mediatype == 'youtube'" class="descvideo">
 					<iframe width="843" height="480" src="{{blog.medialink}}" frameborder="0"  allowfullscreen></iframe>
@@ -46,29 +45,10 @@
 				<span ng-repeat="tag in blog.tag">{{tag}} /</span>
 			</div>
 		</article>
-
-
 	</div>
 
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<a href="/#/section1">dsafasdfsdfsfsdfsdfs</a>
-	<ul ng-repeat="blogdescription in blogdescriptions">
-		<!-- <li class="bigone">{{}}</li> -->
-		<li class="normalone">{{blogdescription.title}}</li>
-	</ul>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
-	<p>dsafasdfsdfsfsdfsdfs</p>
+
+
 
 </div>
 
