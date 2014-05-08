@@ -43,7 +43,7 @@ app.listen(port);
 console.log('WEB is running @ port ' + port);
 
 db.runCommand({ping:1}, function(err, res) {
-	if(!err && res.ok) console.log("DB connected @ blogdb @ 'firstblog'");
+	if(!err && res.ok) console.log("DB connected @ blogdb");
 });
 //db.firstblog.runCommand('count', function(err, res) {
 //    console.log(res);

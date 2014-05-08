@@ -2,7 +2,6 @@ angular.module('MainTempCtrl', []);
 
 
 function MainCtrl($scope, $routeSegment, loader) {
-
 	$scope.$routeSegment = $routeSegment;
 	$scope.loader = loader;
 	$scope.$on('routeSegmentChange', function() {

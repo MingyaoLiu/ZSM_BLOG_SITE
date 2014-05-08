@@ -17,6 +17,13 @@ angular.module('MainTempConfig', []).config(function($sceDelegateProvider, $rout
 
     $routeSegmentProvider
     
+    .when('/welcome', 'welcome.home')
+    .segment('welcome', {
+        templateUrl: 'ZSM_content/ZSM_template/welcome.html',
+        controller: WelcomeCtrl
+    })
+
+
     .when('/blog', 'blog.home')
     .segment('blog', {
         templateUrl: 'ZSM_content/ZSM_template/temp-blog.html',
@@ -189,5 +196,5 @@ angular.module('MainTempConfig', []).config(function($sceDelegateProvider, $rout
 
 
 
-    $routeProvider.otherwise({redirectTo: '/blog'}); 
+    $routeProvider.otherwise({redirectTo: '/welcome'}); 
 }) ;
