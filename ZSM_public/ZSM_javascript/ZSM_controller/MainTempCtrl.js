@@ -7,5 +7,6 @@ function MainCtrl($scope, $routeSegment, loader) {
 	$scope.$on('routeSegmentChange', function() {
 		loader.show = false;
 	});
+	jQuery( ".temp-main div" ).removeClass( "firsttime" );
 	
 }
