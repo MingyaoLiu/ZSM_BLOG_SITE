@@ -5,10 +5,14 @@ angular.module('BlogApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 'route-segment'
 
 
 function Section1Ctrl($scope, $rootScope, $routeSegment) {
+    $scope.$watch('form', function(newVal, oldVal){
+    console.log('changed');
+}, true);
     $rootScope.pageClass = 'page-home';
     $scope.$routeSegment = $routeSegment;
     $scope.test = { btnClicked: false };
     $scope.items = [ 1,2,3,4,5 ];
+
 }
 
 function Section1ItemCtrl($scope, $rootScope, $routeSegment) {
