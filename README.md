@@ -1,4 +1,4 @@
-ZSM_BLOG_SITE
+#ZSM_BLOG_SITE (deprecated)
 =============
 
-blog site project starting from 2014
+blog site project started 2014
